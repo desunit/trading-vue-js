@@ -40,7 +40,7 @@ export default {
             }
 
             var cc = cnv.candles
-            for (var i = 0, n = cc.length; i < n; i++) {
+            for (i = 0, n = cc.length; i < n; i++) {
                 new Candle(this, ctx, cc[i])
             }
 
