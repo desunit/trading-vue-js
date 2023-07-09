@@ -31,8 +31,9 @@ export default class CandleExt {
         this.ctx.beginPath()
         this.ctx.moveTo(x05, Math.floor(data.h))
         this.ctx.lineTo(x05, Math.floor(data.l))
+        
         var old = this.ctx.lineWidth;
-        this.ctx.lineWidth = 2;
+        this.ctx.lineWidth = this.style.config.WICK_WIDTH;
         this.ctx.stroke()
         this.ctx.lineWidth = old;
 
