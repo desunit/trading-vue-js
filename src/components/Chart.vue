@@ -83,6 +83,9 @@ export default {
         goto(t) {
             const dt = this.range[1] - this.range[0]
             this.range_changed([t - dt, t])
+            for(var grid in this._layout.grids) {
+                this.cursor_changed({grid_id: grid, x: this._layout.grids[grid].t2screen(t), y: 0})
+            }
         },
         setRange(t1, t2) {
             this.range_changed([t1, t2])
