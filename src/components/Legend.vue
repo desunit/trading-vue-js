@@ -8,7 +8,7 @@
              :style="{ color: common.colors.title }">
               {{common.title_txt}}
         </span>
-        <span v-if="show_values">
+        <span v-if="show_values && !common.hide_legend">
             O<span class="t-vue-lspan" >{{ohlcv[0]}}</span>
             H<span class="t-vue-lspan" >{{ohlcv[1]}}</span>
             L<span class="t-vue-lspan" >{{ohlcv[2]}}</span>

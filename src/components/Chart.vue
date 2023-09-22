@@ -43,7 +43,7 @@ export default {
     props: [
         'title_txt', 'data', 'width', 'height', 'font', 'colors',
         'overlays', 'tv_id', 'config', 'buttons', 'toolbar', 'ib',
-        'skin', 'timezone'
+        'skin', 'timezone', 'hide_legend'
     ],
     mixins: [Shaders, DataTrack],
     components: {
@@ -172,7 +172,8 @@ export default {
                 config: this.$props.config,
                 buttons: this.$props.buttons,
                 meta: this.meta,
-                skin: this.$props.skin
+                skin: this.$props.skin,
+                hide_legend: this.$props.hide_legend,
             }
         },
         overlay_subset(source, side) {

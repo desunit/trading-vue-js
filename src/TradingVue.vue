@@ -182,6 +182,10 @@ export default {
         timezone: {
             type: Number,
             default: 0
+        },
+        hideLegend: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -202,7 +206,8 @@ export default {
                 colors: Object.assign({}, this.$props.colors ||
                     this.colorpack),
                 skin: this.skin_proto,
-                timezone: this.$props.timezone
+                timezone: this.$props.timezone,
+                hide_legend: this.$props.hideLegend,
             }
 
             this.parse_colors(chart_props.colors)
