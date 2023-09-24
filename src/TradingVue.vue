@@ -2,7 +2,7 @@
 <template>
     <!-- Main component  -->
     <div class="trading-vue" v-bind:id="id"
-        @mousedown="mousedown" @mouseleave="mouseleave"
+        @mousedown="mousedown" @mouseleave="mouseleave" @dblclick="dblclick"
          :style="{
             color: this.chart_props.colors.text,
             font: this.font_comp,
@@ -364,6 +364,9 @@ export default {
         },
         mouseleave() {
             this.$refs.chart.activated = false
+        },
+        dblclick() {
+            this.$emit('dblclick');
         }
     }
 }
