@@ -3,6 +3,7 @@
     <!-- Main component  -->
     <div class="trading-vue" v-bind:id="id"
         @mousedown="mousedown" @mouseleave="mouseleave" @dblclick="dblclick"
+        :title="this.tooltip"
          :style="{
             color: this.chart_props.colors.text,
             font: this.font_comp,
@@ -54,6 +55,10 @@ export default {
         titleTxt: {
             type: String,
             default: 'TradingVue.js'
+        },
+        tooltip: {
+            type: String,
+            default: ''
         },
         id: {
             type: String,
